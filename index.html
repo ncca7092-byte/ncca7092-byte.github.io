@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trading verstehen – Premium Landing</title>
+  <title>Strukturiertes Trading – Klarheit statt Chaos</title>
   <style>
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
@@ -60,16 +60,16 @@
     h1 {
       margin-top: 20px;
       font-size: 32px;
-      line-height: 1.15;
+      line-height: 1.12;
       font-weight: 600;
       animation: fadeUp 0.6s ease-out 0.05s both;
     }
     .lead {
       margin-top: 16px;
       font-size: 16px;
-      line-height: 1.7;
-      color: rgba(255,255,255,0.70);
-      max-width: 640px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.72);
+      max-width: 680px;
       animation: fadeUp 0.6s ease-out 0.1s both;
     }
     .buttons {
@@ -96,10 +96,42 @@
       border: 1px solid rgba(255,255,255,0.20);
       background: transparent;
     }
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.05);
+    .btn-secondary:hover { background: rgba(255,255,255,0.05); }
+    .microcopy {
+      margin-top: 14px;
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 640px;
+      animation: fadeUp 0.6s ease-out 0.2s both;
     }
-
+    .points {
+      margin-top: 24px;
+      display: grid;
+      gap: 10px;
+      animation: fadeUp 0.6s ease-out 0.25s both;
+    }
+    .point {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+    }
+    .point span {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 22px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(52,211,153,0.14);
+      border: 1px solid rgba(52,211,153,0.24);
+      color: #86efac;
+      font-size: 12px;
+      margin-top: 1px;
+    }
     .dashboard-wrap {
       position: relative;
       animation: fadeUpScale 0.7s ease-out 0.15s both;
@@ -142,9 +174,7 @@
       font-size: 12px;
       color: #34d399;
     }
-    .dash-content {
-      padding: 16px;
-    }
+    .dash-content { padding: 16px; }
     .chart-box {
       position: relative;
       height: 128px;
@@ -177,16 +207,12 @@
       background: rgba(255,255,255,0.05);
       padding: 8px;
     }
-    .stat .k {
-      color: rgba(255,255,255,0.40);
-    }
+    .stat .k { color: rgba(255,255,255,0.40); }
     .stat .v {
       margin-top: 4px;
       color: #ffffff;
     }
-    .visual {
-      padding-bottom: 56px;
-    }
+    .visual { padding-bottom: 56px; }
     .visual img {
       width: 100%;
       display: block;
@@ -204,9 +230,9 @@
     }
     .transition-text {
       margin: 12px auto 0;
-      max-width: 560px;
+      max-width: 640px;
       color: rgba(255,255,255,0.70);
-      line-height: 1.7;
+      line-height: 1.75;
     }
     .footer {
       border-top: 1px solid rgba(255,255,255,0.10);
@@ -216,7 +242,6 @@
       color: rgba(255,255,255,0.50);
       font-size: 12px;
     }
-
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(18px); }
       to { opacity: 1; transform: translateY(0); }
@@ -229,11 +254,10 @@
       0%, 100% { opacity: 0.7; }
       50% { opacity: 1; }
     }
-
     @media (min-width: 640px) {
       .container { padding-left: 24px; padding-right: 24px; }
       .hero { padding: 80px 0; }
-      h1 { font-size: 40px; }
+      h1 { font-size: 42px; }
       .lead { font-size: 18px; }
       .footer { font-size: 14px; }
     }
@@ -241,12 +265,9 @@
       .container { padding-left: 32px; padding-right: 32px; }
       .hero { padding: 96px 0; }
       .hero-grid { grid-template-columns: 1.05fr 0.95fr; }
-      h1 { font-size: 48px; }
-      h2 { font-size: 30px; }
-      .buttons {
-        flex-direction: row;
-        align-items: center;
-      }
+      h1 { font-size: 52px; }
+      h2 { font-size: 32px; }
+      .buttons { flex-direction: row; align-items: center; }
     }
   </style>
 </head>
@@ -258,18 +279,28 @@
           <div class="hero-copy">
             <div class="badge">
               <span class="dot"></span>
-              Educational Trading Program
+              Strukturiertes Trading
             </div>
 
-            <h1>Trading verstehen – ohne Chaos, ohne Zufall</h1>
+            <h1>Trading ohne System führt oft zu Chaos, Unsicherheit und impulsiven Entscheidungen</h1>
 
             <p class="lead">
-              Die meisten starten ohne Struktur. Hier beginnt der erste Schritt zu einem klaren, reproduzierbaren Prozess.
+              Hier lernst du, wie Marktanalyse, Risiko und Ausführung in einen klaren Prozess gebracht werden — ohne Hype, ohne blinde Signale und ohne unrealistische Versprechen.
             </p>
 
             <div class="buttons">
-              <a href="landing-2.html" class="btn btn-primary">Mehr Details ansehen</a>
-              <a href="landing-2.html" class="btn btn-secondary">Weiter</a>
+              <a href="landing-2.html" class="btn btn-primary">Mehr erfahren</a>
+              <a href="https://t.me/strukturiertestrading_team" target="_blank" rel="noopener" class="btn btn-secondary">Direkt anfragen</a>
+            </div>
+
+            <div class="microcopy">
+              Für Einsteiger und Trader ohne klares System. Reines Bildungsprogramm. Keine Anlageberatung.
+            </div>
+
+            <div class="points">
+              <div class="point"><span>✓</span><div>Mehr Struktur vor jedem Trade statt spontaner Entscheidungen</div></div>
+              <div class="point"><span>✓</span><div>Klarere Einschätzung von Marktphasen, Zonen und Risiko</div></div>
+              <div class="point"><span>✓</span><div>Ein nachvollziehbarer Ablauf statt ständigem Strategiewechsel</div></div>
             </div>
           </div>
 
@@ -279,7 +310,7 @@
               <div class="dashboard">
                 <div class="dash-top">
                   <div class="left">Trading Dashboard</div>
-                  <div class="right">Live</div>
+                  <div class="right">Live Concept</div>
                 </div>
 
                 <div class="dash-content">
@@ -297,22 +328,22 @@
 
                   <div class="stats">
                     <div class="stat">
+                      <div class="k">Focus</div>
+                      <div class="v">Struktur</div>
+                    </div>
+                    <div class="stat">
                       <div class="k">Risk</div>
-                      <div class="v">Controlled</div>
+                      <div class="v">Kontrolle</div>
                     </div>
                     <div class="stat">
                       <div class="k">Process</div>
-                      <div class="v">Defined</div>
-                    </div>
-                    <div class="stat">
-                      <div class="k">System</div>
-                      <div class="v">Active</div>
+                      <div class="v">Klarheit</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
     </section>
@@ -325,9 +356,9 @@
 
     <section class="transition-section">
       <div class="container">
-        <h2>Der nächste Schritt</h2>
+        <h2>Der nächste Schritt: Verstehen, was dir bisher gefehlt hat</h2>
         <p class="transition-text">
-          Sehen Sie im nächsten Schritt, wie ein strukturierter Trading-Ansatz im Detail aufgebaut wird.
+          Auf der nächsten Seite siehst du, warum viele Trader trotz Motivation nicht vorankommen, wie ein strukturierter Ansatz aufgebaut ist und wie du den passenden Einstieg findest.
         </p>
         <a href="landing-2.html" class="btn btn-primary" style="margin-top:20px; display:inline-block;">Zur Detailseite</a>
       </div>
@@ -335,7 +366,7 @@
 
     <footer class="footer">
       <div class="container">
-        Kein Finanzprodukt. Keine Anlageberatung.
+        Strukturiertes Trading · Bildungsprogramm · Keine Anlageberatung
       </div>
     </footer>
   </div>

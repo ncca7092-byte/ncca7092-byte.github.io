@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trading Landing 2 – Premium</title>
+  <title>Strukturiertes Trading – Details</title>
   <style>
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
@@ -69,12 +69,17 @@
       font-weight: 600;
       letter-spacing: -0.02em;
     }
+    h3 {
+      font-size: 20px;
+      line-height: 1.3;
+      font-weight: 600;
+    }
     .lead {
       margin-top: 20px;
       max-width: 760px;
-      color: rgba(255,255,255,0.70);
+      color: rgba(255,255,255,0.72);
       font-size: 17px;
-      line-height: 1.75;
+      line-height: 1.78;
       animation: fadeUp 0.6s ease-out 0.1s both;
     }
     .buttons {
@@ -108,6 +113,7 @@
       margin-top: 14px;
       color: rgba(255,255,255,0.5);
       font-size: 14px;
+      line-height: 1.6;
     }
     .panel-wrap {
       position: relative;
@@ -196,6 +202,7 @@
       background: rgba(255,255,255,0.05);
       border-radius: 18px;
       padding: 14px 16px;
+      line-height: 1.55;
     }
     .num {
       width: 28px;
@@ -218,7 +225,7 @@
       font-size: 12px;
       margin-bottom: 10px;
     }
-    .cards4, .cards3, .grid2 {
+    .cards4, .cards3, .grid2, .faq-grid, .steps-grid {
       display: grid;
       gap: 18px;
     }
@@ -242,7 +249,7 @@
       font-size: 14px;
       line-height: 1.8;
     }
-    .list .row {
+    .list .row, .faq-item, .step-item {
       display: flex;
       gap: 14px;
       border: 1px solid rgba(255,255,255,0.10);
@@ -272,6 +279,47 @@
       font-size: 15px;
       line-height: 1.7;
     }
+    .partner-section { padding-top: 12px; }
+    .partner-intro {
+      margin-top: 12px;
+      color: rgba(255,255,255,0.64);
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+    .partner-logos {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 16px;
+      align-items: stretch;
+    }
+    .partner-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+      border-radius: 22px;
+      min-height: 98px;
+      padding: 20px;
+      backdrop-filter: blur(14px);
+    }
+    .partner-logo img {
+      max-width: 150px;
+      max-height: 36px;
+      width: auto;
+      height: auto;
+      filter: grayscale(1) brightness(1.15);
+      opacity: 0.92;
+    }
+    .partner-note {
+      margin-top: 14px;
+      color: rgba(255,255,255,0.46);
+      font-size: 13px;
+      line-height: 1.6;
+    }
     .cta-box {
       border: 1px solid rgba(255,255,255,0.10);
       background: #fff;
@@ -296,7 +344,19 @@
       transition: transform .2s ease;
     }
     .cta-dark:hover { transform: scale(1.02); }
-
+    .cta-links {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .cta-link {
+      color: rgba(0,0,0,0.72);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .cta-link a { text-decoration: underline; }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(18px); }
       to { opacity: 1; transform: translateY(0); }
@@ -309,15 +369,15 @@
       0%, 100% { opacity: .72; }
       50% { opacity: 1; }
     }
-
     @media (min-width: 640px) {
       .container { padding: 0 24px; }
       .hero { padding: 84px 0 48px; }
-      h1 { font-size: 42px; }
+      h1 { font-size: 44px; }
       h2 { font-size: 34px; }
       .lead { font-size: 19px; }
       .cards3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
-      .benefit-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .benefit-grid, .faq-grid, .steps-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .partner-logos { grid-template-columns: repeat(4, minmax(0,1fr)); }
     }
     @media (min-width: 900px) {
       .container { padding: 0 32px; }
@@ -342,20 +402,20 @@
       <div class="container">
         <div class="hero-grid">
           <div>
-            <div class="pill"><span class="dot"></span>Premium Trading Education</div>
+            <div class="pill"><span class="dot"></span>Strukturiertes Trading</div>
 
-            <h1>Warum die meisten im Trading scheitern – und warum ein System den Unterschied macht</h1>
+            <h1>Trading ohne System kostet dich Klarheit, Kontrolle und oft auch Geld</h1>
 
             <p class="lead">
-              Die meisten scheitern nicht an Motivation, sondern an fehlender Struktur. Dieses Programm zeigt, wie Analyse, Risiko und Ausführung in einen klaren, disziplinierten Prozess gebracht werden.
+              Dieses Bildungsprogramm hilft dir, Marktanalyse, Risiko und Ausführung in einen klaren, strukturierten Prozess zu bringen — ohne Hype, ohne blinde Signale und ohne unrealistische Versprechen.
             </p>
 
             <div class="buttons">
-              <a href="https://t.me/Elox2" target="_blank" class="btn btn-primary">Jetzt in Telegram anfragen</a>
-              <a href="https://t.me/Elox2" target="_blank" class="btn btn-secondary">Persönlich schreiben</a>
+              <a href="https://t.me/strukturiertestrading_team" target="_blank" rel="noopener" class="btn btn-primary">Jetzt persönlich anfragen</a>
+              <a href="https://t.me/+FSTRbDq3MqczODg0" target="_blank" rel="noopener" class="btn btn-secondary">Zum Telegram-Kanal</a>
             </div>
 
-            <div class="muted">Details zu Teilnahme, Format und Konditionen im direkten Gespräch</div>
+            <div class="muted">Im Kanal findest du Inhalte und Einblicke. Für Teilnahme, Ablauf und Fragen schreibst du direkt persönlich.</div>
           </div>
 
           <div class="panel-wrap">
@@ -367,70 +427,86 @@
                     <div class="small">Market Framework</div>
                     <div style="margin-top:4px; font-size:18px; font-weight:600;">Clarity over Noise</div>
                   </div>
-                  <div class="status">Live Concept</div>
+                  <div class="status">Struktur statt Zufall</div>
                 </div>
 
                 <div class="inner-content">
                   <div class="three">
                     <div class="mini">
                       <div class="k">Layer 1</div>
-                      <div class="v">Context</div>
+                      <div class="v">Marktkontext</div>
                     </div>
                     <div class="mini">
                       <div class="k">Layer 2</div>
-                      <div class="v">Entry Logic</div>
+                      <div class="v">Entry-Logik</div>
                     </div>
                     <div class="mini">
                       <div class="k">Layer 3</div>
-                      <div class="v">Risk Control</div>
+                      <div class="v">Risikokontrolle</div>
                     </div>
                   </div>
 
                   <div class="core">
-                    <div class="small">Core Idea</div>
-                    <div class="big">Ein sauberer Prozess reduziert emotionale Fehler und schafft bessere Entscheidungen.</div>
+                    <div class="small">Kernidee</div>
+                    <div class="big">Ein klarer Prozess reduziert emotionale Fehler und verbessert deine Entscheidungen vor jedem Trade.</div>
                   </div>
 
                   <div class="stack">
-                    <div class="stack-item"><div class="num">1</div><div>Einstieg ohne klares Regelwerk</div></div>
-                    <div class="stack-item"><div class="num">2</div><div>Emotionale Entscheidungen statt Struktur</div></div>
-                    <div class="stack-item"><div class="num">3</div><div>Fokus auf schnelle Ergebnisse statt auf Risiko</div></div>
-                    <div class="stack-item"><div class="num">4</div><div>Ständiger Wechsel der Strategie ohne System</div></div>
+                    <div class="stack-item"><div class="num">1</div><div>Einstieg ohne klares Regelwerk und ohne wiederholbaren Ablauf</div></div>
+                    <div class="stack-item"><div class="num">2</div><div>Zu viele Strategien, aber kein eigenes System</div></div>
+                    <div class="stack-item"><div class="num">3</div><div>Emotionale Entscheidungen statt sauber definierter Risiko-Regeln</div></div>
+                    <div class="stack-item"><div class="num">4</div><div>Ständiger Wechsel statt konsequenter Verbesserung eines Prozesses</div></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
+      </div>
+    </section>
+
+    <section class="section partner-section">
+      <div class="container" style="text-align:center;">
+        <div class="eyebrow">Marktumfeld</div>
+        <h2>Bekannte Plattformen, mit denen Trader weltweit arbeiten</h2>
+        <p class="partner-intro">
+          Im Markt werden etablierte Börsen für Analyse, Ausführung und Verwaltung genutzt. Der Fokus dieses Programms liegt jedoch nicht auf einer Plattform, sondern auf einem besseren Entscheidungsprozess.
+        </p>
+        <div class="partner-logos">
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/03/OKX_Logo.svg" alt="OKX Logo" /></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Binance_logo.svg" alt="Binance Logo" /></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Kraken_wordmark_-_black.svg" alt="Kraken Logo" /></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Bitpanda_Logo_green.svg" alt="Bitpanda Logo" /></div>
+        </div>
+        <div class="partner-note">Hinweis: Keine offiziellen Partnerschaften oder Kooperationen. Die Logos dienen ausschließlich der Einordnung bekannter Marktplattformen.</div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="eyebrow">Framework</div>
-        <h2>Die vier Bausteine eines professionelleren Ansatzes</h2>
+        <div class="eyebrow">Problem</div>
+        <h2>Warum viele Trader trotz Motivation nicht vorankommen</h2>
 
         <div class="cards4" style="margin-top:28px;">
           <div class="card">
             <div class="icon"></div>
-            <h3>Marktverständnis</h3>
-            <p>Strukturen, Phasen und Bewegungsmuster sauber lesen statt impulsiv reagieren.</p>
+            <h3>Kein klarer Ablauf</h3>
+            <p>Viele steigen in Trades ein, ohne einen festen Prozess für Analyse, Bestätigung und Ausführung zu haben.</p>
           </div>
           <div class="card">
             <div class="icon"></div>
-            <h3>Risikomanagement</h3>
-            <p>Kapital schützen, Positionsgröße kontrollieren und Entscheidungen messbar machen.</p>
+            <h3>Zu viel Input</h3>
+            <p>Ständig neue Strategien, Setups und Meinungen sorgen oft für Überforderung statt für Klarheit.</p>
           </div>
           <div class="card">
             <div class="icon"></div>
-            <h3>Regelbasierter Ablauf</h3>
-            <p>Ein klarer Prozess für Analyse, Entry, Exit und Review.</p>
+            <h3>Schwaches Risikomanagement</h3>
+            <p>Risiko wird zu spät definiert oder nach Gefühl angepasst, statt vorher sauber geplant zu sein.</p>
           </div>
           <div class="card">
             <div class="icon"></div>
-            <h3>Disziplin</h3>
-            <p>Weniger Zufall. Mehr Konsistenz im Verhalten und in der Ausführung.</p>
+            <h3>Emotionale Entscheidungen</h3>
+            <p>Ohne System übernehmen Druck, Hoffnung und Unsicherheit die Kontrolle über das eigene Verhalten.</p>
           </div>
         </div>
       </div>
@@ -440,47 +516,50 @@
       <div class="container">
         <div class="grid2">
           <div class="card" style="padding:32px;">
-            <div class="eyebrow">Programminhalte</div>
-            <h2>Worum es im Detail geht</h2>
+            <div class="eyebrow">Lösung</div>
+            <h2>Genau hier setzt Strukturiertes Trading an</h2>
+            <p style="margin-top:20px; color: rgba(255,255,255,0.72); line-height: 1.85;">
+              Statt immer mehr Content zu konsumieren, lernst du einen nachvollziehbaren Ablauf, der dir hilft, den Markt sauberer zu lesen, Risiken bewusster zu steuern und Entscheidungen strukturierter zu treffen.
+            </p>
 
             <div class="list">
-              <div class="row"><div class="num">1</div><div>Wie Marktstruktur gelesen wird und warum viele Signale falsch interpretieren</div></div>
-              <div class="row"><div class="num">2</div><div>Welche Zonen, Bestätigungen und Kontexte wirklich relevant sind</div></div>
-              <div class="row"><div class="num">3</div><div>Wie Risiko vor jedem Trade definiert wird</div></div>
-              <div class="row"><div class="num">4</div><div>Wie ein wiederholbarer Trading-Prozess aufgebaut wird</div></div>
-              <div class="row"><div class="num">5</div><div>Wie Fehler dokumentiert und systematisch reduziert werden</div></div>
+              <div class="row"><div class="num">1</div><div>Marktkontext verstehen und Bewegungen besser einordnen</div></div>
+              <div class="row"><div class="num">2</div><div>Relevante Zonen und Bestätigungen klarer bewerten</div></div>
+              <div class="row"><div class="num">3</div><div>Risiko vor dem Einstieg definieren statt nach Gefühl handeln</div></div>
+              <div class="row"><div class="num">4</div><div>Analyse, Entry, Exit und Review in einen Prozess bringen</div></div>
+              <div class="row"><div class="num">5</div><div>Fehler dokumentieren und systematisch reduzieren</div></div>
             </div>
           </div>
 
           <div class="card" style="padding:32px; background: linear-gradient(to bottom, rgba(255,255,255,0.10), rgba(255,255,255,0.05));">
-            <div class="eyebrow">Warum dieser Schritt sinnvoll ist</div>
-            <h2>Nicht mehr Content. Ein besseres Entscheidungssystem.</h2>
+            <div class="eyebrow">Was sich verändern kann</div>
+            <h2>Du brauchst nicht noch mehr Content. Du brauchst einen klaren Prozess.</h2>
 
             <p style="margin-top:20px; color: rgba(255,255,255,0.70); line-height: 1.8;">
-              Viele konsumieren ständig neue Inhalte, ohne daraus ein stabiles Vorgehen zu entwickeln. Ziel ist nicht mehr Input, sondern ein sauberer Ablauf, der zu Ihrer Situation passt und konsistent angewendet werden kann.
+              Ziel ist nicht, dich mit Informationen zu überladen. Ziel ist, dass du verstehst, wie du Märkte strukturierter analysierst, Risiko bewusster steuerst und vor jedem Trade mit mehr Klarheit handelst.
             </p>
 
             <div class="benefit-grid">
               <div class="benefit">
-                <div class="small">Vorteil</div>
+                <div class="small">Ergebnis</div>
                 <div style="margin-top:8px; font-size:18px; font-weight:600;">Klarere Analyse</div>
               </div>
               <div class="benefit">
-                <div class="small">Vorteil</div>
+                <div class="small">Ergebnis</div>
                 <div style="margin-top:8px; font-size:18px; font-weight:600;">Weniger Impulsivität</div>
               </div>
               <div class="benefit">
-                <div class="small">Vorteil</div>
-                <div style="margin-top:8px; font-size:18px; font-weight:600;">Besseres Risikobewusstsein</div>
+                <div class="small">Ergebnis</div>
+                <div style="margin-top:8px; font-size:18px; font-weight:600;">Mehr Risikobewusstsein</div>
               </div>
               <div class="benefit">
-                <div class="small">Vorteil</div>
-                <div style="margin-top:8px; font-size:18px; font-weight:600;">Reproduzierbarer Prozess</div>
+                <div class="small">Ergebnis</div>
+                <div style="margin-top:8px; font-size:18px; font-weight:600;">Reproduzierbarer Ablauf</div>
               </div>
             </div>
 
             <div class="risk">
-              Wichtig: Der Handel an Finanzmärkten ist riskant. Das Programm dient der Weiterbildung und vermittelt keine individuellen Anlageempfehlungen.
+              Wichtig: Der Handel an Finanzmärkten ist riskant. Dieses Programm dient ausschließlich der Weiterbildung und vermittelt keine individuellen Anlageempfehlungen.
             </div>
           </div>
         </div>
@@ -490,24 +569,70 @@
     <section class="section">
       <div class="container">
         <div class="card" style="padding:32px;">
-          <div class="eyebrow">Für wen das geeignet ist</div>
-          <h2>Für Personen, die ernsthaft strukturierter handeln möchten</h2>
+          <div class="eyebrow">Für wen das sinnvoll ist</div>
+          <h2>Für Personen, die Trading ernsthaft strukturierter angehen wollen</h2>
           <p style="margin-top:20px; color: rgba(255,255,255,0.70); max-width: 860px; line-height:1.8;">
-            Wenn Sie nicht nach schnellen Versprechen suchen, sondern nach einem nachvollziehbaren Weg, Ihre Marktanalyse und Ihr Verhalten zu verbessern, ist dies der richtige nächste Schritt.
+            Dieses Programm ist für Menschen gedacht, die nicht nach schnellen Gewinnen suchen, sondern nach einem nachvollziehbaren Weg, ihr Marktverständnis, ihre Entscheidungen und ihr Verhalten zu verbessern.
           </p>
 
           <div class="cards3" style="margin-top:24px;">
             <div class="card" style="background: rgba(10,16,34,0.70);">
               <div class="small">Geeignet</div>
-              <div style="margin-top:8px; font-weight:600;">Für ernsthafte Einsteiger</div>
+              <div style="margin-top:8px; font-weight:600;">Für Einsteiger mit ernsthaftem Interesse</div>
             </div>
             <div class="card" style="background: rgba(10,16,34,0.70);">
-              <div class="small">Sinnvoll</div>
+              <div class="small">Geeignet</div>
               <div style="margin-top:8px; font-weight:600;">Für Trader ohne klares System</div>
             </div>
             <div class="card" style="background: rgba(10,16,34,0.70);">
-              <div class="small">Weniger passend</div>
-              <div style="margin-top:8px; font-weight:600;">Für unrealistische Erwartungen</div>
+              <div class="small">Nicht geeignet</div>
+              <div style="margin-top:8px; font-weight:600;">Für unrealistische Gewinnerwartungen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow">Nächster Schritt</div>
+        <h2>So läuft der Einstieg ab</h2>
+        <div class="steps-grid" style="margin-top:24px;">
+          <div class="step-item"><div class="num">1</div><div>Du schreibst uns persönlich auf Telegram</div></div>
+          <div class="step-item"><div class="num">2</div><div>Du erhältst Details zu Ablauf, Teilnahme und Format</div></div>
+          <div class="step-item"><div class="num">3</div><div>Wir schauen, ob das Angebot zu deinem aktuellen Stand passt</div></div>
+          <div class="step-item"><div class="num">4</div><div>Danach entscheidest du in Ruhe über den nächsten Schritt</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow">FAQ</div>
+        <h2>Häufige Fragen</h2>
+        <div class="faq-grid" style="margin-top:24px;">
+          <div class="faq-item">
+            <div>
+              <h3>Ist das ein Signal-Service?</h3>
+              <p>Nein. Es handelt sich um ein Bildungsprogramm und nicht um einen Signal-Service.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div>
+              <h3>Ist das auch für Anfänger geeignet?</h3>
+              <p>Ja, sofern du bereit bist, strukturiert zu lernen und nicht nach Abkürzungen suchst.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div>
+              <h3>Bekomme ich individuelle Anlageempfehlungen?</h3>
+              <p>Nein. Es gibt keine individuelle Anlageberatung und keine persönlichen Anlageempfehlungen.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div>
+              <h3>Wie erfahre ich Details zur Teilnahme?</h3>
+              <p>Alle Details zu Ablauf, Format und Teilnahme erhältst du direkt im persönlichen Austausch über Telegram.</p>
             </div>
           </div>
         </div>
@@ -518,12 +643,16 @@
       <div class="container">
         <div class="cta-box">
           <div>
-            <div style="font-size:12px; letter-spacing:.22em; text-transform:uppercase; color: rgba(0,0,0,0.45);">Nächster Schritt</div>
-            <h2 style="margin-top:10px;">Schreiben Sie jetzt direkt in Telegram</h2>
-            <p>Im Gespräch erhalten Sie Details zu Ablauf, Teilnahme und den nächsten sinnvollen Schritten.</p>
+            <div style="font-size:12px; letter-spacing:.22em; text-transform:uppercase; color: rgba(0,0,0,0.45);">Dein nächster Schritt</div>
+            <h2 style="margin-top:10px;">Wenn du Trading endlich strukturierter angehen willst, dann starte hier</h2>
+            <p>Schreibe jetzt persönlich auf Telegram und erhalte alle Details zu Ablauf, Teilnahme und dem passenden Einstieg.</p>
+            <div class="cta-links">
+              <div class="cta-link">Oder zuerst den <a href="https://t.me/+FSTRbDq3MqczODg0" target="_blank" rel="noopener">Telegram-Kanal ansehen</a></div>
+              <div class="cta-link">Kontakt: <a href="https://t.me/strukturiertestrading_team" target="_blank" rel="noopener">@strukturiertestrading_team</a></div>
+            </div>
           </div>
           <div class="cta-actions">
-            <a href="https://t.me/Elox2" target="_blank" class="cta-dark">Telegram öffnen</a>
+            <a href="https://t.me/strukturiertestrading_team" target="_blank" rel="noopener" class="cta-dark">Jetzt persönlich schreiben</a>
           </div>
         </div>
       </div>
